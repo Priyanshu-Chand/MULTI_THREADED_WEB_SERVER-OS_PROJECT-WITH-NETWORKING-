@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTWS - Server Dashboard</title>
+    <link rel="stylesheet" href="style1.css"> 
+</head>
+<body>
+    <div class="header">
+        <h1><strong>Multi Threaded Web Server - Dashboard</strong></h1>
+        <div id="status-indicators">
+            </div>
+    </div>
+
+    <div class="container">
+        <div class="dashboard-stats">
+            <h2>Real-time Statistics</h2>
+            <div class="stat-grid">
+                <div class="stat-box">
+                    <p>Active Threads</p>
+                    <h3 id="activeThreads">0</h3>
+                </div>
+                <div class="stat-box">
+                    <p>Total Threads</p>
+                    <h3 id="totalThreads">32</h3>
+                </div>
+                <div class="stat-box">
+                    <p>Queued Tasks</p>
+                    <h3 id="queuedTasks">0</h3>
+                </div>
+                <div class="stat-box">
+                    <p>Total Requests</p>
+                    <h3 id="totalRequests">0</h3>
+                </div>
+                <div class="stat-box">
+                    <p>Peak Thread Used</p>
+                    <h3 id="peakConnections">0</h3>
+                </div>
+                <div class="stat-box">
+                    <p>Request Acknowledged</p>
+                    <h3 id="closedConnections">0</h3>
+                </div>
+            </div>
+
+
+
+            <div class="thread-pool-status">
+                <h4>Thread Pool Status (<span id="pool-size-display">0</span> Threads)</h4>
+                <div id="thread-grid" class="thread-grid">
+                    </div>
+            </div>
+
+
+
+        </div>
+
+        
+        <div class="file-requester">
+            <h2>File Requester (Load Test)</h2>
+            <select id="file-dropdown">
+                <option value="">Select a file...</option>
+            </select>
+            <button id="request-file-btn">Request File</button>
+            <div id="media-display">
+                </div>
+            <p class="note">Requesting a file uses an API thread and contributes to the metrics above.</p>
+        </div>
+    </div>
+
+    <div class="container log-container">
+        <div id="request-log-card">
+            <h2>File Request Log</h2>
+            <div id="file-log-content">
+                </div>
+        </div>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
