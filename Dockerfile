@@ -10,7 +10,7 @@ COPY . .
 
 # Run the LINUX compile command
 # This creates the executable file named 'server'
-RUN g++ WindowServer.cpp -o server -pthread -std=c++17 -static-libstdc++
+RUN g++ NewServer.cpp -o server -pthread -std=c++17 -static-libstdc++
 
 
 # --- Stage 2: The "Final" Image ---
