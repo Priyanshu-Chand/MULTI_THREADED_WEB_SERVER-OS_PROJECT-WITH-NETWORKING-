@@ -15,7 +15,7 @@ RUN g++ WindowServer.cpp -o server -pthread -std=c++17
 
 # --- Stage 2: The "Final" Image ---
 # We use a minimal, secure image for the final product
-FROM debian:buster-slim
+FROM debian:bookworm-slim
 
 # Set the working directory
 WORKDIR /app
