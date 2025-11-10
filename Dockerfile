@@ -1,6 +1,6 @@
 # --- Stage 1: The "Builder" ---
 # We use a base image that has the g++ compiler
-FROM gcc:latest AS builder
+FROM gcc:12 AS builder
 
 # Set the working directory inside the container
 WORKDIR /app
